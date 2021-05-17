@@ -1,4 +1,4 @@
-from minesweeper_api1 import __version__
+from minesweeper_api import __version__
 
 
 def test_version():
