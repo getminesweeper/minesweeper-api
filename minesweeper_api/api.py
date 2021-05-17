@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello Minesweeper"}
 
 def start():
     """Launched with `poetry run start` at root level"""
