@@ -16,7 +16,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Poetry Setup
-        uses: ClementWalter/poetry-action@v1
-        
+        uses: abatilo/actions-poetry@v2.1.0
+        with:
+          poetry-version: 1.1.6
+
       - name: Run Tests
         run: poetry run pytest
