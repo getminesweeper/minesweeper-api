@@ -21,4 +21,6 @@ jobs:
           poetry-version: 1.1.6
 
       - name: Run Tests
-        run: poetry run pytest
+        run: |
+          poetry install
+          poetry run pytest
