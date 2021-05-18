@@ -25,6 +25,7 @@ jobs:
           poetry run pytest
 
   deploy-heroku:
+    runs-on: ubuntu-latest
     needs: [run-tests]
     if: github.ref == 'refs/heads/main'
 
