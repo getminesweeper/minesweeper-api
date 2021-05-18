@@ -7,4 +7,13 @@ tests:
 code-analysis:
 	@poetry run flake8
 
-.PHONY: start tests code-analysis
+build:
+	@poetry install
+
+update:
+	@poetry update
+
+shell:
+	@poetry shell
+
+.PHONY: start tests code-analysis build update shell
