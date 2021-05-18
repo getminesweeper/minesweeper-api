@@ -8,8 +8,21 @@ on:
     # branches: [ main ]
 
 jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Make Code Analysis
+        run: |
+          poetry install
+          poetry run code-analysis
+
   run-tests:
     runs-on: ubuntu-latest
+    needs: [static-analysis]
 
     steps:
       - uses: actions/checkout@v2
