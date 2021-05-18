@@ -2,11 +2,10 @@ name: Minesweeper Pipeline
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  workflow_dispatch:
+    branches:
+       - "**"
+  # pull_request:
+    # branches: [ main ]
 
 jobs:
   run-tests:
@@ -30,6 +29,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
       - name: Heroku Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
