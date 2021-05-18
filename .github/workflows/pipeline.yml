@@ -25,6 +25,11 @@ jobs:
           poetry install
           poetry run pytest
 
+  deploy-heroku:
+    needs: [run-tests]
+    if: github.ref == 'refs/heads/main'
+
+    steps:
       - name: Heroku Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
