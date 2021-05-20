@@ -82,6 +82,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "dataclass-type-validator"
+version = "0.0.7"
+description = "Dataclass Type Validator Library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "fastapi"
 version = "0.65.1"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
@@ -358,7 +366,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.5"
-content-hash = "3a3288f7004dd4459fb6d890f5d2f1b60cda58450484e254d74177d1e94ff312"
+content-hash = "7d565be85cedf0fdad99d619e273d24666dd22633e9eaff1066f3b0e845e35dd"
 
 [metadata.files]
 appdirs = [
@@ -392,6 +400,10 @@ click = [
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+]
+dataclass-type-validator = [
+    {file = "dataclass-type-validator-0.0.7.tar.gz", hash = "sha256:0074266ca276ce2a1338d51b09e314f42514282afb41fa60250b9c50bca3af2e"},
+    {file = "dataclass_type_validator-0.0.7-py3-none-any.whl", hash = "sha256:a8194b5ed56f66f373d63d590db045af217e52a3001909c13f57234e666d8a59"},
 ]
 fastapi = [
     {file = "fastapi-0.65.1-py3-none-any.whl", hash = "sha256:7619282fbce0ec53c7dfa3fa262280c00ace9f6d772cfd06e4ab219dce66985e"},

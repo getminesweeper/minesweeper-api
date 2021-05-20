@@ -1,6 +1,5 @@
-import uvicorn
+from minesweeper_api.adapters import main_api
 
 
-def start():
-    """Launched with `poetry run start` at root level"""
-    uvicorn.run("minesweeper_api.api:app", host="0.0.0.0", port=8000, reload=True)
+def run_api():
+    main_api.run()

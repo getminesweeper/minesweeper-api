@@ -8,6 +8,8 @@ authors = ["Miguel Hernández <mhernand@thougtworks.com>", "Yusdanis Feus <yusda
 python = "3.8.5"
 fastapi = "^0.65.1"
 uvicorn = "^0.13.4"
+dataclass-type-validator = "^0.0.7"
+pydantic = "^1.8.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -21,4 +23,9 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-start = "minesweeper_api.main:start"
+start = "minesweeper_api.main:run_api"
+
+[tool.black]
+line-length = 79
+target-version = ['py37']
+include = '\.pyi?$'
