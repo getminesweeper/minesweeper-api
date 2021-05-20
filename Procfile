@@ -1,1 +1,1 @@
-web: uvicorn minesweeper_api.api:app --host=0.0.0.0 --port=${PORT}
+web: uvicorn minesweeper_api.adapters.main_api:app --host=0.0.0.0 --port=${PORT}
