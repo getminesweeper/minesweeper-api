@@ -8,10 +8,16 @@ MAX_ROWS_AND_COLS = 17
 class MinesweeperGameBoard(object):
     def __init__(self, rows: int, cols: int) -> None:
         if rows < MIN_ROWS_AND_COLS or cols < MIN_ROWS_AND_COLS:
-            raise ValueError("Invalid value exception")
+            raise ValueError(
+                "Rows and cols values must be greater than "
+                f"{MIN_ROWS_AND_COLS - 1}"
+            )
 
         if rows > MAX_ROWS_AND_COLS or cols > MAX_ROWS_AND_COLS:
-            raise ValueError("Invalid value exception")
+            raise ValueError(
+                "Rows and cols values must be lesser than "
+                f"{MAX_ROWS_AND_COLS + 1}"
+            )
 
         self.board_boxes = [
             [MinesweeperBoardBox()] * cols for _ in range(rows)

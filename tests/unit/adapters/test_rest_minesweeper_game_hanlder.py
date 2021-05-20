@@ -1,7 +1,6 @@
 from minesweeper_api.adapters.rest.rest_minesweeper_game_handler import (
     RestMinesweeperGameHandler,
 )
-from minesweeper_api.domain.entities.minesweeper_game import GameStatus
 from minesweeper_api.domain.aggregators.minesweeper_game_type import (
     MinesweeperGameType,
 )
@@ -14,5 +13,5 @@ def test_rest_minesweeper_game_handler_should_create_a_minesweeper_game():
 
     assert minesweeper_game
     assert minesweeper_game.id
-    assert minesweeper_game.status == GameStatus.INITIALIZED
-    assert minesweeper_game.board
+    assert minesweeper_game.rows
+    assert minesweeper_game.cols

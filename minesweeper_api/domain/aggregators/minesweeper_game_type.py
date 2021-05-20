@@ -7,3 +7,4 @@ from dataclass_type_validator import dataclass_validate
 class MinesweeperGameType:
     rows: int
     cols: int
+    id: str = ""

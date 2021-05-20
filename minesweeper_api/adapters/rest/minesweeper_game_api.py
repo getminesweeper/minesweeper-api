@@ -5,11 +5,16 @@ from minesweeper_api.adapters.rest.minesweeper_game_response import (
 from minesweeper_api.adapters.rest.minesweeper_game_request import (
     MinesweeperGameRequest,
 )
-from minesweeper_api.domain_ports.minesweeper_game_handler import (
-    MinesweeperGameHandler,
+from minesweeper_api.adapters.rest.rest_minesweeper_game_handler import (
+    RestMinesweeperGameHandler,
+)
+from minesweeper_api.adapters.rest.error_validations import (
+    handle_minesweeper_api_exceptions,
 )
 
+
 router = APIRouter()
+minesweeper_game_handler = RestMinesweeperGameHandler()
 
 
 @router.post(
@@ -20,10 +25,10 @@ router = APIRouter()
 )
 def create_minesweeper_game(minesweeper_game_input: MinesweeperGameRequest):
     try:
-        minesweeper_game_handler = MinesweeperGameHandler()
-        created_minesweeper_game = minesweeper_game_handler.create(
+        # minesweeper_game_handler = RestMinesweeperGameHandler()
+        created_minesweeper_game = minesweeper_game_handler.add(
             minesweeper_game_input.get_minesweeper_game_type()
         )
         return created_minesweeper_game
     except Exception as exception:
-        raise exception
+        handle_minesweeper_api_exceptions(exception)
