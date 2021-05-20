@@ -1,10 +1,6 @@
-from enum import Enum
-
-
-class BoardBoxStatus(Enum):
-    CLOSED = 1
-    OPENED = 2
-    FLAGGED = 3
+from minesweeper_api.domain.value_objects.board_box_status import (
+    BoardBoxStatus,
+)
 
 
 class MinesweeperBoardBox(object):

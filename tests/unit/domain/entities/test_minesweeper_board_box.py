@@ -1,5 +1,7 @@
 from minesweeper_api.domain.entities.minesweeper_board_box import (
     MinesweeperBoardBox,
+)
+from minesweeper_api.domain.value_objects.board_box_status import (
     BoardBoxStatus,
 )
 
