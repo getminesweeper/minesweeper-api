@@ -27,7 +27,7 @@ def test_board_boxes_should_be_instance_of_board_box():
 def test_should_not_create_minesweeper_game_board_when_min_rows_is_invalid():
     with pytest.raises(
         ValueError,
-        match="Rows and cols values must be greater than 2",
+        match="The minimum amount of rows and cols to be configured is 3",
     ):
         MinesweeperGameBoard(2, 10)
 
@@ -35,7 +35,7 @@ def test_should_not_create_minesweeper_game_board_when_min_rows_is_invalid():
 def test_should_not_create_minesweeper_game_board_when_min_cols_is_invalid():
     with pytest.raises(
         ValueError,
-        match="Rows and cols values must be greater than 2",
+        match="The minimum amount of rows and cols to be configured is 3",
     ):
         MinesweeperGameBoard(10, 2)
 
@@ -43,7 +43,7 @@ def test_should_not_create_minesweeper_game_board_when_min_cols_is_invalid():
 def test_should_not_create_minesweeper_game_board_when_max_rows_is_invalid():
     with pytest.raises(
         ValueError,
-        match="Rows and cols values must be lesser than 18",
+        match="The maximum amount of rows and cols to be configured is 17",
     ):
         MinesweeperGameBoard(20, 10)
 
@@ -51,6 +51,6 @@ def test_should_not_create_minesweeper_game_board_when_max_rows_is_invalid():
 def test_should_not_create_minesweeper_game_board_when_max_cols_is_invalid():
     with pytest.raises(
         ValueError,
-        match="Rows and cols values must be lesser than 18",
+        match="The maximum amount of rows and cols to be configured is 17",
     ):
         MinesweeperGameBoard(10, 20)
