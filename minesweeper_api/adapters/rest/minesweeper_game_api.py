@@ -25,7 +25,6 @@ minesweeper_game_handler = RestMinesweeperGameHandler()
 )
 def create_minesweeper_game(minesweeper_game_input: MinesweeperGameRequest):
     try:
-        # minesweeper_game_handler = RestMinesweeperGameHandler()
         created_minesweeper_game = minesweeper_game_handler.add(
             minesweeper_game_input.get_minesweeper_game_type()
         )
