@@ -1,4 +1,9 @@
 # minesweeper-api
+minessweeper-api is an Python API implementation of the 70's [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) game for PCs.
+
+We created this project with the for improving our Domain Driven Design skills, so we believe this project could be developed in other programming languages for learning purposes or just for fun.
+
+You can see the [DrawIO](https://app.diagrams.net/) work diagram [here](./diagrams/minesweeper-game.drawio)
 
 ## Dependencies
 
