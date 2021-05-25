@@ -1,4 +1,4 @@
-from pydantic import BaseModel, StrictInt, StrictStr
+from pydantic import BaseModel, StrictInt
 from minesweeper_api.domain.aggregators.minesweeper_game_type import (
     MinesweeperGameType,
 )

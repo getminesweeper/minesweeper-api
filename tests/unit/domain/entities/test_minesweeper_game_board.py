@@ -27,6 +27,45 @@ def test_board_boxes_should_be_instance_of_board_box():
             assert isinstance(board_boxes[row][col], MinesweeperBoardBox)
 
 
+def test_should_mined_the_board_box_right_when_game_is_easy():
+    minesweeper_game_board = MinesweeperGameBoard(6, 8, GameDifficulty.EASY)
+    board_boxes = minesweeper_game_board.board_boxes
+
+    amount_of_mines = 0
+    for row in range(minesweeper_game_board.rows):
+        for col in range(minesweeper_game_board.cols):
+            if board_boxes[row][col].is_mined:
+                amount_of_mines += 1
+
+    assert 5 == amount_of_mines
+
+
+def test_should_mined_the_board_box_right_when_game_is_medium():
+    minesweeper_game_board = MinesweeperGameBoard(6, 8, GameDifficulty.MEDIUM)
+    board_boxes = minesweeper_game_board.board_boxes
+
+    amount_of_mines = 0
+    for row in range(minesweeper_game_board.rows):
+        for col in range(minesweeper_game_board.cols):
+            if board_boxes[row][col].is_mined:
+                amount_of_mines += 1
+
+    assert 24 == amount_of_mines
+
+
+def test_should_mined_the_board_box_right_when_game_is_hard():
+    minesweeper_game_board = MinesweeperGameBoard(6, 8, GameDifficulty.HARD)
+    board_boxes = minesweeper_game_board.board_boxes
+
+    amount_of_mines = 0
+    for row in range(minesweeper_game_board.rows):
+        for col in range(minesweeper_game_board.cols):
+            if board_boxes[row][col].is_mined:
+                amount_of_mines += 1
+
+    assert 36 == amount_of_mines
+
+
 def test_should_calculete_right_amount_of_mines_when_game_difficulty_is_easy():
     minesweeper_game_board = MinesweeperGameBoard(6, 8, GameDifficulty.EASY)
     assert minesweeper_game_board.amount_of_mines == 5
