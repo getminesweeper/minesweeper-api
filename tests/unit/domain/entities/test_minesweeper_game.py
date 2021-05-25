@@ -1,4 +1,4 @@
-from minesweeper_api.domain.entities.minesweeper_game import (
+from minesweeper_api.domain.aggregates.minesweeper_game import (
     MineswpeerGame,
 )
 from minesweeper_api.domain.value_objects.game_status import GameStatus

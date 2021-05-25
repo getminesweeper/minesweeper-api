@@ -1,7 +1,7 @@
 from minesweeper_api.adapters.rest.minesweeper_game_request import (
     MinesweeperGameRequest,
 )
-from minesweeper_api.domain.aggregators.minesweeper_game_type import (
+from minesweeper_api.domain.aggregates.minesweeper_game_type import (
     MinesweeperGameType,
 )
 
