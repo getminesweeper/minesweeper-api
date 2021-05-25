@@ -9,6 +9,7 @@ def test_should_return_201_create_code_when_payload_is_valid():
     request = {
         "rows": 7,
         "cols": 8,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
@@ -16,12 +17,14 @@ def test_should_return_201_create_code_when_payload_is_valid():
     assert response.json()["rows"]
     assert request["rows"] == response.json()["rows"]
     assert request["cols"] == response.json()["cols"]
+    assert request["difficulty"] == response.json()["difficulty"]
 
 
 def test_should_return_400_bad_request_when_min_rows_is_invalid():
     request = {
         "rows": 2,
         "cols": 8,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
@@ -36,6 +39,7 @@ def test_should_return_400_bad_request_when_min_cols_is_invalid():
     request = {
         "rows": 8,
         "cols": 2,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
@@ -50,6 +54,7 @@ def test_should_return_400_bad_request_when_max_rows_is_invalid():
     request = {
         "rows": 20,
         "cols": 8,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
@@ -60,10 +65,22 @@ def test_should_return_400_bad_request_when_max_rows_is_invalid():
     )
 
 
+def test_should_return_422_status_code_when_difficulty_is_invalid():
+    request = {
+        "rows": 7,
+        "cols": 8,
+        "difficulty": "other",
+    }
+    response = client.post("/api/games/", json=request)
+
+    assert status.HTTP_422_UNPROCESSABLE_ENTITY == response.status_code
+
+
 def test_should_return_400_bad_request_when_max_cols_is_invalid():
     request = {
         "rows": 8,
         "cols": 20,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
@@ -78,6 +95,7 @@ def test_should_return_422_status_code_when_rows_and_cols_are_not_integers():
     request = {
         "rows": 8.5,
         "cols": 4.5,
+        "difficulty": "EASY",
     }
     response = client.post("/api/games/", json=request)
 
