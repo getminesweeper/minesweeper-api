@@ -19,6 +19,7 @@ def _map_to_minesweeper_game_type(minesweeper_game: MineswpeerGame):
             id=minesweeper_game.id,
             rows=minesweeper_game.board.rows,
             cols=minesweeper_game.board.cols,
+            difficulty=minesweeper_game.difficulty,
         )
     return minesweeper_game_type
 
@@ -33,7 +34,9 @@ class MemoryMinesweeperGameRepository(MinesweeperGameRepository):
     ) -> MinesweeperGameType:
         try:
             minesweeper_game = self.minesweeper_game_service.create(
-                minesweeper_game_type.rows, minesweeper_game_type.cols
+                minesweeper_game_type.rows,
+                minesweeper_game_type.cols,
+                minesweeper_game_type.difficulty,
             )
             self.minesweeper_game_data[minesweeper_game.id] = minesweeper_game
             return _map_to_minesweeper_game_type(minesweeper_game)
