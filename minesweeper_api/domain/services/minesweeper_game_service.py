@@ -1,4 +1,4 @@
-from minesweeper_api.domain.entities.minesweeper_game import MineswpeerGame
+from minesweeper_api.domain.aggregates.minesweeper_game import MineswpeerGame
 from minesweeper_api.domain.entities.minesweeper_game_board import (
     MinesweeperGameBoard,
 )

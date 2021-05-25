@@ -10,7 +10,7 @@ from minesweeper_api.adapters.rest.minesweeper_game_response import (
 from minesweeper_api.adapters.repositories.memory_minesweeper_game_repository import (
     MemoryMinesweeperGameRepository,
 )
-from minesweeper_api.domain.entities.minesweeper_game import (
+from minesweeper_api.domain.aggregates.minesweeper_game import (
     MineswpeerGame,
 )
 

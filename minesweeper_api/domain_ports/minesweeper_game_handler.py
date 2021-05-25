@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from minesweeper_api.domain.aggregates.minesweeper_game_type import (
     MinesweeperGameType,
 )
-from minesweeper_api.domain.entities.minesweeper_game import (
+from minesweeper_api.domain.aggregates.minesweeper_game import (
     MineswpeerGame,
 )
 

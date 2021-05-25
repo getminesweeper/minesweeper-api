@@ -7,7 +7,7 @@ from minesweeper_api.domain.aggregates.minesweeper_game_type import (
 from minesweeper_api.domain.services.minesweeper_game_service import (
     MinesweeperGameService,
 )
-from minesweeper_api.domain.entities.minesweeper_game import (
+from minesweeper_api.domain.aggregates.minesweeper_game import (
     MineswpeerGame,
 )
 
