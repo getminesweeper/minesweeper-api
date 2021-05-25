@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from minesweeper_api.domain.aggregators.minesweeper_game_type import (
+from minesweeper_api.domain.aggregates.minesweeper_game_type import (
     MinesweeperGameType,
 )
 from minesweeper_api.domain.entities.minesweeper_game import (

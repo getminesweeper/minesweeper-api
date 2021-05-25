@@ -1,7 +1,7 @@
 from minesweeper_api.adapters.rest.rest_minesweeper_game_handler import (
     RestMinesweeperGameHandler,
 )
-from minesweeper_api.domain.aggregators.minesweeper_game_type import (
+from minesweeper_api.domain.aggregates.minesweeper_game_type import (
     MinesweeperGameType,
 )
 from minesweeper_api.domain.value_objects.game_difficulty import (
