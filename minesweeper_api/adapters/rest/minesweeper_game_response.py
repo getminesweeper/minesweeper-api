@@ -31,13 +31,7 @@ class MinesweeperGameResponse(BaseModel):
         minesweeper_game_type: MinesweeperGameType,
     ):
 
-        # board_boxes = [
-        #     [
-        #         BoardBox(status=box.status, is_mined=box.is_mined)
-        #         for row in minesweeper_game_type.board
-        #         for box in row
-        #     ]
-        # ]
+
         board_boxes = []
         for row in minesweeper_game_type.board:
             board_boxes.append(
