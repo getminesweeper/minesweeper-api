@@ -57,7 +57,7 @@ class MinesweeperGameBoard(object):
     def __assign_mines(self):
         assigned_mines = 0
 
-        while (assigned_mines < self.amount_of_mines):
+        while assigned_mines < self.amount_of_mines:
             row = random.randint(0, self.rows - 1)
             col = random.randint(0, self.cols - 1)
 

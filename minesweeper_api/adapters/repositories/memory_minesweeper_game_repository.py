@@ -20,6 +20,7 @@ def _map_to_minesweeper_game_type(minesweeper_game: MineswpeerGame):
             rows=minesweeper_game.board.rows,
             cols=minesweeper_game.board.cols,
             difficulty=minesweeper_game.difficulty,
+            board=minesweeper_game.board.board_boxes,
         )
     return minesweeper_game_type
 
